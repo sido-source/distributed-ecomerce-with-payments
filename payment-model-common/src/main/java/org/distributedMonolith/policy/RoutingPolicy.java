@@ -1,4 +1,4 @@
 package org.distributedMonolith.policy;
 
-public class PaymentPolicy {
+public class RoutingPolicy {
 }

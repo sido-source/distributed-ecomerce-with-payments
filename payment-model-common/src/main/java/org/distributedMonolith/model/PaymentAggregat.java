@@ -2,6 +2,10 @@ package org.distributedMonolith.model;
 
 package com.example.payment.common.model;
 
+import org.distributedMonolith.enums.PaymentStatus;
+import org.distributedMonolith.enums.PaymentStep;
+import org.distributedMonolith.enums.PspType;
+import org.distributedMonolith.event.PaymentEvent;
 import org.distributedMonolith.model.envelope.PaymentRequestEnvelope;
 import org.distributedMonolith.model.envelope.PaymentResponseEnvelope;
 import org.distributedMonolith.enums.PaymentAction;
@@ -9,20 +13,35 @@ import org.distributedMonolith.enums.PaymentAction;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 import java.util.*;
+import java.util.function.Function;
 
 // Aggregate Root
-public class PaymentAggregate {
+public class PaymentAggregate<TReq, TResp> {
     private final String id;
-    private final String orderId;
+    private final PaymentAggregate<?,?> parentAggregate; // for capture, refund, cancel uthorization
+    private final String orderRef;
     private final BigDecimal amount;
     private final Currency currency;
-    private final PSPType pspType;
+    private final PspType pspType;
+    private final Map<PaymentAction, List<PaymentAttempt>> attempts = new HashMap<>();
+    private final Function<PaymentAction, PaymentActionContext<TReq, TResp>> actionContextFactory;
     private PaymentStatus status;
     private PaymentStep step;
+    private PaymentProcessor paymentProcessor;
     private final InfrastructureMetadata metadata = new InfrastructureMetadata();
 
     private final List<PaymentEvent> domainEvents = new ArrayList<>();
-    private final Map<PaymentAction, PaymentActionContext<?, ?>> actionContexts = new HashMap<>();
+    //private final Map<PaymentAction, PaymentActionContext<?, ?>> actionContexts = new HashMap<>();
+
+
+    public void routeTo(PaymentProviderType provider) { this.routedProvider = provider; }
+    public PaymentAttempt startAttempt(PaymentProviderType provider) {
+        PaymentAttempt attempt = new PaymentAttempt(this.id, provider);
+        attempts.add(attempt);
+        return attempt;
+    }
+
+
 
     public <TReq, TResp> void recordRequest(PaymentAction action,
                                             PaymentRequestEnvelope<TReq> requestEnvelope) {
@@ -58,12 +77,13 @@ public class PaymentAggregate {
                 .toList();
     }
 
-    public PaymentAggregate(String id, String orderId, BigDecimal amount, Currency currency, PSPType pspType) {
+    public PaymentAggregate(String id, String orderId, BigDecimal amount, Currency currency, PSPType pspType, Function<PaymentAction, PaymentActionContext<TReq, TResp>> actionContextFactory) {
         this.id = id;
-        this.orderId = orderId;
+        this.orderRef = orderId;
         this.amount = amount;
         this.currency = currency;
         this.pspType = pspType;
+        this.actionContextFactory = actionContextFactory;
         this.status = PaymentStatus.PENDING;
         this.step = PaymentStep.INITIALIZED;
     }
