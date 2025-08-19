@@ -3,15 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.distributedMonolith</groupId>
+        <artifactId>ecomerce</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>org.distributedMonolith</groupId>
-    <artifactId>ecomerce</artifactId>
+    <groupId>org.distributedMonolith.order</groupId>
+    <artifactId>order-domain</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <packaging>pom</packaging>
+
     <modules>
-        <module>rest-application-model-common</module>
-        <module>payment-domain</module>
-        <module>order-domain</module>
+        <module>order-server-api</module>
+        <module>order-client</module>
     </modules>
 
     <properties>

@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/application-model-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/application-model-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/model-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/model-common/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/order-client-connector/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/order-client-connector/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/order-model-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/order-model-common/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/order-server-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/order-server-api/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/payment-adyen-model/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/payment-adyen-model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-domain/order-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-domain/order-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-domain/order-model-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-domain/order-model-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-domain/order-server-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-domain/order-server-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-domain/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-adyen-processor/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-adyen-processor/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/payment-model-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/payment-model-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-model-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-model-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/adyen-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/adyen-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/adyen-reconciliation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/adyen-reconciliation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/adyen-response/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/adyen-response/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/adyen-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/adyen-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/payment-adyen-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/payment-adyen-model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/payment-processor-adyen/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/payment-domain/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-server-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-server-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rest-application-model-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rest-application-model-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

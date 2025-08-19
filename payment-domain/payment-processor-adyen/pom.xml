@@ -3,16 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>org.distributedMonolith</groupId>
-    <artifactId>ecomerce</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <parent>
+        <groupId>org.distributedMonolith.payment</groupId>
+        <artifactId>payment-domain</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <packaging>pom</packaging>
+
     <modules>
-        <module>rest-application-model-common</module>
-        <module>payment-domain</module>
-        <module>order-domain</module>
+        <module>adyen-server</module>
+        <module>adyen-client</module>
+        <module>adyen-response</module>
+        <module>adyen-reconciliation</module>
     </modules>
+
+    <groupId>org.distributedMonolith.payment.adyen</groupId>
+    <artifactId>payment-processor-adyen</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
