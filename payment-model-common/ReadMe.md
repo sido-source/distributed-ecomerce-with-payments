@@ -8,3 +8,7 @@ each payment action should use the common interfaces and abstract classes with s
 
 
 scalable per region/country - once we can can have morning or dinner where are different sentiments etc
+
+adding observer pattern
+DomainEvent<P>
+Publisher<E>
